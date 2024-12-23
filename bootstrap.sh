@@ -10,7 +10,7 @@
 #
 #########################################################
 if [ -z "${TAG}" ]; then
-	TAG="v2.60"
+	TAG="v2.61"
 fi
 
 
@@ -26,7 +26,7 @@ if [ ! -d $HOME/multipool ]; then
 	mkdir -p $HOME/multipool
 	mkdir -p $HOME/multipool/install
 	echo Downloading MultiPool Installer ${TAG}. . .
-	git clone https://github.com/Casraw/Multi-Pool-Installer.git "$HOME"/multipool/install
+	git clone https://github.com/Casraw/multipool_setup.git "$HOME"/multipool/install
 	cd $HOME/multipool/install
 	git checkout tags/${TAG}
     cd -
