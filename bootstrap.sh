@@ -22,13 +22,11 @@ if [ ! -d $HOME/multipool ]; then
 		DEBIAN_FRONTEND=noninteractive apt-get -q -q install -y git < /dev/null
 		echo
 	fi
-    echo Creating the MultiPool directory. . .
-	mkdir -p $HOME/multipool
-	mkdir -p $HOME/multipool/install
+
 	echo Downloading MultiPool Installer ${TAG}. . .
 	git clone \
 		-b ${TAG} --depth 1 \
-		https://github.com/Casraw/multipool_setup.git \
+		https://github.com/Casraw/multipool_setup \
 		"$HOME"/multipool/install \
 		< /dev/null 2> /dev/null
 
