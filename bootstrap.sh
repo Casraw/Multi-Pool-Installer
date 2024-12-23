@@ -27,11 +27,13 @@ if [ ! -d $HOME/multipool ]; then
 	mkdir -p $HOME/multipool/install
 	echo Downloading MultiPool Installer ${TAG}. . .
 	git clone \
-		-b ${TAG} --depth 1 \
+		--depth 1 \
 		https://github.com/Casraw/multipool_setup.git \
 		"$HOME"/multipool/install \
 		< /dev/null 2> /dev/null
-
+	cd $HOME/multipool/install
+	git checkout tags/${TAG}
+    cd -
 	echo
 fi
 
